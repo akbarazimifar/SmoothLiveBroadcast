@@ -1,0 +1,22 @@
+# Keep native methods
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keep class com.google.** { *; }
+-keep class com.facebook.** { *; }
+-keep class android.** { *; }
+-keep class org.jboss.** { *; }
+-keep class org.apache.** { *; }
+
+
+# Needed by google-api-client
+-keepattributes Signature
+-keepattributes *Annotation*
+
+# Removing logs
+-assumenosideeffects class com.rustero.App {
+    public static *** log(...);
+}
+
+-dontwarn sun.misc.Unsafe

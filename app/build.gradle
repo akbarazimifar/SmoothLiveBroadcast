@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId 'rustero.live.streaming.encoder'
+        minSdkVersion 22
+        targetSdkVersion 22
+        versionCode 20
+        versionName '1.0.20'
+    }
+
+    sourceSets.main {
+        jniLibs.srcDir 'jniLibs'
+        jni.srcDirs = []
+    }
+
+    buildTypes {
+        release {
+            //debuggable true
+            minifyEnabled true
+            proguardFile 'proguard-rules.txt'
+        }
+    }
+    //org.apache.http
+    useLibrary 'org.apache.http.legacy'
+}
+
+configurations.all() {
+    exclude group: "org.apache.httpcomponents", module: "httpclient"
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.0.0'
+    compile 'com.android.support:support-v4:26.0.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+
+    compile 'com.google.android.gms:play-services-plus:7.8.0'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev180-1.22.0'
+    compile 'com.google.api-client:google-api-client-android:+'
+    compile 'com.google.api-client:google-api-client-gson:+'
+    compile 'com.google.code.gson:gson:2.3'
+}
