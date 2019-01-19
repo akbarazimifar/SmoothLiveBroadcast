@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+        <!-- root container -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                >
+
+                <ImageButton
+                    android:id="@+id/main_open_panel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_72"
+                    />
+
+                <TextView
+                    android:id="@+id/main_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:text="@string/app_name"
+                    />
+
+
+                <Button style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/main_reset_key_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="Reset key"
+                    />
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+
+            <!-- main container -->
+
+            <ScrollView
+                android:fillViewport="true"
+                android:fadeScrollbars="false"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:id="@+id/main_container"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <!-- set up strip -->
+                    <LinearLayout
+                        android:id="@+id/main_signin_strip"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        >
+
+                        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/main_test_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Please set up the stream key"
+                            />
+                        <Button
+                            style="@style/MyButton1"
+                            android:id="@+id/main_setup_url_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/button_width_two"
+                            android:layout_marginTop="@dimen/button_gap_label"
+                            android:text="Enter stream key"
+                            />
+
+
+                        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+
+                        <LinearLayout
+                            android:id="@+id/main_twitch_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                >
+                                <Button
+                                    style="@style/GuideButton"
+                                    android:id="@+id/twitch_dashboard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Twitch dashboard"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                >
+                                <Button
+                                    style="@style/GuideButton"
+                                    android:id="@+id/twitch_guide"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Twitch guide"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/main_youtube_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            >
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                >
+                                <Button
+                                    style="@style/GuideButton"
+                                    android:id="@+id/youtube_dashboard"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="YouTube dashboard"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                >
+                                <Button
+                                    style="@style/GuideButton"
+                                    android:id="@+id/youtube_guide"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="YouTube guide"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+                    </LinearLayout>  <!-- set up strip -->
+
+
+
+
+
+                    <!-- go live strip -->
+                    <LinearLayout
+                        android:id="@+id/main_rtmped_golive_strip"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/main_front_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textSize="@dimen/strip_font_size_label"
+                                android:text="Front camera:"
+                                />
+                            <Spinner
+                                android:id="@+id/main_front_spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="@dimen/button_width_one"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="right"
+                                android:spinnerMode="dialog"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/main_back_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textSize="@dimen/strip_font_size_label"
+                                android:text="Back camera:"
+                                />
+                            <Spinner
+                                android:id="@+id/main_back_spinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="@dimen/button_width_one"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="right"
+                                android:spinnerMode="dialog"
+                                />
+                        </LinearLayout>
+
+                        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+                        <Button
+                            style="@style/MyButton1"
+                            android:id="@+id/main_golive_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/button_width_two"
+                            android:layout_marginBottom="22dp"
+                            android:text="Go live now"
+                            />
+
+
+
+
+                        <!---->
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/main_film_layout"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="12dp"-->
+                            <!--android:gravity="center"-->
+                            <!--&gt;-->
+                            <!--<Switch-->
+                                <!--android:id="@+id/main_film_switch"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--/>-->
+                            <!--<TextView-->
+                                <!--android:id="@+id/main_film_text"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="4dp"-->
+                                <!--android:textSize="@dimen/strip_font_size_label"-->
+                                <!--android:text="Also record to MP4 (premium)"-->
+                                <!--/>-->
+                        <!--</LinearLayout>-->
+
+                        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="@dimen/strip_font_size_label"
+                            android:gravity="center"
+                            android:text="Server latency can be 5-35 seconds"
+                            />
+
+
+                    </LinearLayout>  <!-- go live strip -->
+
+
+
+                </LinearLayout>
+            </ScrollView> <!--main container-->
+
+
+        </LinearLayout>  <!-- root container -->
+
+
+
+
+
+        <!-- panels-->
+
+        <LinearLayout
+            android:id="@+id/main_panel_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#aa000000"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_panel_left"
+            android:layout_width="288dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="start"
+            android:translationX="-9999dp"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/MyColorPrimaryDark"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/MyColorPrimaryDark"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="#444444"
+                        android:text="rustero.com"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/main_close_panel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/close_b72"
+                        android:background="@null"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/main_panel_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:dividerHeight="2dp"
+                android:fadeScrollbars="false"
+                android:background="#ffffff"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+</FrameLayout>

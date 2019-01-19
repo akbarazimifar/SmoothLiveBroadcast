@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <PreferenceCategory
+        android:layout="@layout/pref_cat_layout"
+        android:title="@string/camera"
+        android:summary="@string/camera_parameters"
+        >
+        <com.rustero.widgets.MyListPreference
+            android:key="front_resolution"
+            android:title="@string/front_camera_resolution"
+            />
+
+        <com.rustero.widgets.MyListPreference
+            android:key="back_resolution"
+            android:title="@string/back_camera_resolution"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:layout="@layout/pref_cat_layout"
+        android:title="Notifications"
+        android:summary="Notifications settings"
+        >
+        <SwitchPreference
+            android:key="notify_bitrate_change"
+            android:defaultValue="true"
+            android:title="Bitrate change"
+            android:summary="Notify about bitrate changes"
+            />
+    </PreferenceCategory>
+
+
+
+
+
+
+
+</PreferenceScreen>
+
+

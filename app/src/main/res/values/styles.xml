@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- the app -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+        <item name="android:actionButtonStyle">@style/MyActionButtonStyle</item>
+        <item name="android:textColor">@color/MyTextColor</item>
+        <item name="android:textSize">16sp</item>
+        <item name="colorPrimaryDark">@color/MyColorPrimaryDark</item>
+        <item name="colorPrimary">@color/MyColorPrimary</item>
+        <item name="colorButtonNormal">@color/MyColorPrimary</item>
+        <item name="android:spinnerDropDownItemStyle">@style/MySpinnerDropDownStyle</item>
+        <item name="android:dialogTheme">@style/MyDialogStyle</item>
+        <item name="android:alertDialogTheme">@style/MyDialogStyle</item>
+    </style>
+
+
+    <style name="MyToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="MyDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorButtonNormal">@color/MyColorPrimary</item>
+    </style>
+
+
+    <!-- Style to replace actionbar overflow icon. set item 'android:actionOverflowButtonStyle' in AppTheme -->
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_dots_72</item>
+        <item name="android:background">?android:attr/actionBarItemBackground</item>
+    </style>
+
+    <style name="MyActionButtonStyle" parent="AppTheme">
+        <item name="android:minWidth">20dip</item>
+    </style>
+
+    <style name="MySpinnerDropDownStyle" parent="android:style/Widget.DropDownItem.Spinner">
+        <item name="android:background">@drawable/spinner_selector</item>
+        <item name="android:checkMark">@null</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+
+    <style name="MyButton1" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="android:background">@drawable/my_button_shape_1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingLeft">22dp</item>
+        <item name="android:paddingRight">22dp</item>
+    </style>
+
+
+    <style name="GuideButton" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">188dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+
+
+    <!--view styles-->
+    <dimen name="strip_font_size_label">18sp</dimen>
+    <dimen name="strip_font_size_value">16sp</dimen>
+    <color name="strip_font_color_value">#444444</color>
+    <dimen name="strip_padding_bottom">8dp</dimen>
+    <dimen name="strip_margin_button">8dp</dimen>
+    <dimen name="button_gap_label">8dp</dimen>
+    <dimen name="button_width_one">122dp</dimen>
+    <dimen name="button_width_two">244dp</dimen>
+    <dimen name="button_width_guide">166dp</dimen>
+
+
+
+
+
+    <!--colors-->
+
+    <color name="MyColorPrimary">#aa88ff</color>
+    <color name="MyColorPrimaryDark">#440088</color>
+    <color name="MyTextColor">#000000</color>
+
+    <color name="record_flow_text_color">#ffffbb44</color>
+    <color name="record_overlay_back_color">#44000000</color>
+
+    <color name="MyButtonNormalColor">#330088</color>
+    <color name="MyButtonNormalStartColor">#550088</color>
+    <color name="MyButtonPressedStartColor">#550088</color>
+    <color name="MyButtonPressedEndColor">#990088</color>
+
+
+
+    <!--dividers -->
+
+    <style name="Divider2dpCaption">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/MyColorPrimaryDark</item>
+    </style>
+
+    <style name="Divider1dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+    <style name="Divider2dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+    <style name="Divider3dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+
+
+    <!-- general dimens -->
+    <dimen name="font_size_normal">16sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>
